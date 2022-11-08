@@ -4,7 +4,7 @@ import Tuiter from "./components/tuiter";
 
 function App() {
   return (
-    <Tuiter/>
+      <Tuiter/>
   );
 }
 
