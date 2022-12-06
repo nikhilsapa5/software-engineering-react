@@ -63,5 +63,3 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
     );
 }
 export default Tuit;
-
-//dislike button added
