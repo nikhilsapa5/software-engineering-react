@@ -1,7 +1,7 @@
 import axios from "axios";
- const BASE_URL = "https://tuiterfsedev.herokuapp.com/";
+ const BASE_URL = "https://fse-a2-new.herokuapp.com/";
 
-const USERS_API = 'https://tuiterfsedev.herokuapp.com/api/users';
+const USERS_API = 'https://fse-a2-new.herokuapp.com/api/users';
 
 export const createUser = (user) =>
   axios.post(`${USERS_API}`, user)
