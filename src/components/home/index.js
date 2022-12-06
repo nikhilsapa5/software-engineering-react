@@ -62,5 +62,3 @@ const Home = () => {
   );
 };
 export default Home;
-
-//bug fix
