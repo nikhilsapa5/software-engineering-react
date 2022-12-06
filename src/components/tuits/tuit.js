@@ -39,9 +39,9 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
                 }
             </div>
             <div className="w-100">
-                <i onClick={() => deleteTuit(tuit._id)} className="fas fa-remove fa-2x fa-pull-right"/>
+                <i onClick={() => deleteTuit(tuit._id)} className="fas fa-remove fa-2x fa-pull-right"></i>
                 <Link to={`/tuit/${tuit._id}`}>
-                    <i className="float-end fas fa-circle-ellipsis me-1"/>
+                    <i className="float-end fas fa-circle-ellipsis me-1"></i>
                 </Link>
                 <h2
                     className="fs-5">
@@ -63,3 +63,5 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
     );
 }
 export default Tuit;
+
+//dislike button added

@@ -1,4 +1,3 @@
-
 import {useEffect, useState} from "react";
 import * as service from "../../services/tuits-service"
 import {useParams} from "react-router-dom";
@@ -14,6 +13,7 @@ const TuitScreen = () => {
     return(
         <div>
             <Tuit tuit={tuit} likeTuit={() => {}}/>
+            <Tuit tuit={tuit} dislikeTuit={() => {}}/>
         </div>
     );
 };

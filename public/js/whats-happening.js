@@ -1,7 +1,7 @@
 import whatsHappening from "./whats-happening-data.js";
 
 function WhatsHappening() {
- return(`
+    return(`
   <div class="ttr-whats-happening p-2">
    <div class="ttr-search position-relative">
     <i class="fas fa-search position-absolute"></i>
@@ -11,8 +11,8 @@ function WhatsHappening() {
    <div class="bg-secondary bg-opacity-10 ttr-rounded-15px mt-2 p-2">
     <h2>What's happening</h2>
     ${
-     whatsHappening.map(wh => {
-       return(`
+        whatsHappening.map(wh => {
+            return(`
          <div key={wh._id} class="ttr-whats-happening-tuit d-flex mb-3">
            <div class="flex-grow-1">
             <h3 class="fs-6 fw-lighter">
@@ -28,7 +28,7 @@ function WhatsHappening() {
            </div>
           </div>
        `);
-     }).join('')
+        }).join('')
     }
    </div>
   </div>
