@@ -1,9 +1,7 @@
 import axios from "axios";
 
-//const BASE_URL = "http://localhost:4000";
-//const BASE_URL = "https://software-engineering-node-like.herokuapp.com";
-const USERS_API = 'https://fse-neha-a2.herokuapp.com/api/users';
-const TUITS_API = 'https://tuiterfsedev.herokuapp.com/api/tuits';
+const USERS_API = 'https://fse-a2-new.herokuapp.com/api/users';
+const TUITS_API = 'https://fse-a2-new.herokuapp.com/api/tuits';
 const api = axios.create({
   withCredentials: true
 });

@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://fse-neha-a2.herokuapp.com";
+const BASE_URL = "https://fse-a2-new.herokuapp.com";
 //const BASE_URL = process.env.REACT_APP_BASE_URL;
 //const BASE_URL = "http://localhost:4000";
 
