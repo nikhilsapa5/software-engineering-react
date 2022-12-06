@@ -14,17 +14,19 @@ const Tuits = ({tuits = [], refreshTuits}) => {
 
     return (
         <div>
-          <ul className="ttr-tuits list-group">
-            {
-              tuits.map && tuits.map(tuit =>
-                  <Tuit key={tuit._id}
-                        deleteTuit={deleteTuit}
-                        likeTuit={likeTuit}
-                        tuit={tuit}/>)
-            }
-          </ul>
+            <ul className="ttr-tuits list-group">
+                {
+                    tuits.map && tuits.map(tuit =>
+                        <Tuit key={tuit._id}
+                              deleteTuit={deleteTuit}
+                              likeTuit={likeTuit}
+                              tuit={tuit}/>)
+                }
+            </ul>
         </div>
-      );
+    );
 }
 
 export default Tuits;
+
+//bug fix
