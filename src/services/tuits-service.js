@@ -1,7 +1,13 @@
 import axios from "axios";
-const BASE_URL = "https://software-engineering-node-fse1.herokuapp.com"
-const TUITS_API = `${BASE_URL}/api/tuits`;
-const USERS_API = `${BASE_URL}/api/users`;
+
+// const BASE_URL = "https://cs5500-01-sp22.herokuapp.com";
+
+const TUITS_API = 'https://tuiterfsedev.herokuapp.com/api/tuits';
+const USERS_API = 'https://tuiterfsedev.herokuapp.com/api/users';
+
+// const api = axios.create({
+//     withCredentials: true
+// });
 
 export const findAllTuits = () =>
     axios.get(TUITS_API)
@@ -27,6 +33,6 @@ export const deleteTuit = (tid) =>
     axios.delete(`${TUITS_API}/${tid}`)
         .then(response => response.data);
 
-export const deleteTuitsByUid = (uid) =>
-    axios.delete(`${TUITS_API}/${uid}`)
-        .then(response => response.data)
+export const deleteTuitByContent = (content) =>
+        axios.get(`${TUITS_API}/${content}/delete`)
+            .then(response => response.data);
