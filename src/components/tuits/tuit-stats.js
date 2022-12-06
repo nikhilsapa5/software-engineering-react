@@ -25,7 +25,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit = () => {}}) => {
           </span>
             </div>
             <div className="col">
-          <span onClick={() => dislikeTuit(tuit)}>
+          <span onClick={() => dislikeTuit(tuit)} data-testid="test-dislikeButton">
               {
                   tuit.stats && tuit.stats.dislikes > 0 &&
                   <i className="fa-solid fa-thumbs-down" style={{color: 'red'}}></i>

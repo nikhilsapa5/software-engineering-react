@@ -18,4 +18,3 @@ const MyDislikes = () => {
     );
 };
 export default MyDislikes;
-//added new component

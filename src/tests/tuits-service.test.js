@@ -4,7 +4,7 @@ import {
   deleteUsersByUsername, findAllUsers,
   findUserById
 } from "../services/users-service.js";
-import 'regenerator-runtime/runtime'
+import 'regenerator-runtime/runtime' 
 
 describe('createTuit', () => {
 
@@ -16,7 +16,7 @@ describe('createTuit', () => {
   };
   // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am Nikhil'
+    tuit : 'Hi i am meet'
   };
 
   // setup test before running test
@@ -40,7 +40,7 @@ describe('createTuit', () => {
     expect(newUser.username).toEqual(foru1.username);
     expect(newUser.password).toEqual(foru1.password);
     expect(newUser.email).toEqual(foru1.email);
-
+    
     // insert tuit in the database
     const newTuit = await createTuit(newUser._id,tuit1);
     // verify new tuit matches the parameter user
@@ -50,16 +50,16 @@ describe('createTuit', () => {
 
 describe('deleteTuit', () => {
 
-  // sample user to insert
+   // sample user to insert
   const foru1 = {
     username: 'foru',
     password: 'foru123',
     email: 'foru@foru.com'
   };
 
-  // sample tuit to insert
+    // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am Nikhil'
+    tuit : 'Hi i am meet'
   };
   let dummyUser = "";
   let newTuit = "";
@@ -99,11 +99,11 @@ describe('retrieveTuitByTuitId', () => {
 
   // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am Nikhil'
+    tuit : 'Hi i am meet'
   };
   let dummyUser = "";
   let newTuit = "";
-
+  
   // setup test before running test
   beforeAll(async() => {
     // creating users and tuit for the test
@@ -123,15 +123,15 @@ describe('retrieveTuitByTuitId', () => {
 
     // retrieve the tuit from the database by its primary key
     const existingTuit = await findTuitById(newTuit._id);
-
+    
     // verify retrieved tuit matches parameter user
     expect(existingTuit.tuit).toEqual(tuit1.tuit);
-  });
+    });
 });
 
 describe('retreiveAllTuits', () => {
 
-  // sample user to insert
+   // sample user to insert
   const foru1 = {
     username: 'foru',
     password: 'foru123',
@@ -140,7 +140,7 @@ describe('retreiveAllTuits', () => {
 
   // sample tuit to insert
   const tuit1 = ["tuit1", "tuit2", "tuit3"]
-
+      
   let dummyUser = "";
 
   // setup test before running test
@@ -150,37 +150,35 @@ describe('retreiveAllTuits', () => {
     tuit1.map(tuit =>
         createTuit(dummyUser._id,
             {
-              tuit: tuit,
+                tuit: tuit,
             })
     )
-  })
+    })
 
 
   // clean up after test runs
   afterAll(() => {
     // remove any data we created
     tuit1.map(tuit =>
-        deleteTuitByContent(tuit)
+      deleteTuitByContent(tuit)
     )
     return deleteUsersByUsername(foru1.username);
-  })
+})
 
   test('can retrieve all tuits with REST API', async () => {
 
     // retrieve all the tuits
     const allTuits = await findAllTuits();
-
+    
     // let's check length of allTuits array in database with out tuit array database
     expect(allTuits.length).toBeGreaterThanOrEqual(tuit1.length);
     const tuitsWeInserted = allTuits.filter(
-        tuit => tuit1.indexOf(tuit.tuit) >= 0);
-
+      tuit => tuit1.indexOf(tuit.tuit) >= 0);
+    
     // let's check each tuit in the database with the ones we sent
     tuitsWeInserted.forEach(tuit => {
       const tuitName = tuit1.find(tuitName => tuitName === tuit.tuit);
       expect(tuit.tuit).toEqual(tuitName);
-    });
   });
+ });
 });
-
-//commenting

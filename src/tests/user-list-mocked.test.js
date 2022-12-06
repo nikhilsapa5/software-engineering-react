@@ -17,17 +17,15 @@ const MOCKED_USERS = [
 // test rendering from Mock
 test('user list renders mocked', async () => {
   axios.get.mockImplementation(() =>
-      Promise.resolve({ data: {users: MOCKED_USERS} }));
+    Promise.resolve({ data: {users: MOCKED_USERS} }));
   const response = await findAllUsers();
   const users = response.users;
 
   render(
-      <HashRouter>
-        <UserList users={users}/>
-      </HashRouter>);
+    <HashRouter>
+      <UserList users={users}/>
+    </HashRouter>);
 
   const user = screen.getByText(/ellen_ripley/i);
   expect(user).toBeInTheDocument();
 });
-
-//commenting

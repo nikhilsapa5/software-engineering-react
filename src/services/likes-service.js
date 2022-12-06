@@ -1,7 +1,11 @@
-import axios from "axios";
 
-const USERS_API = 'https://fse-a2-new.herokuapp.com/api/users';
-const TUITS_API = 'https://fse-a2-new.herokuapp.com/api/tuits';
+   
+import axios from "axios";
+//const BASE_URL = "https://software-engineering-node-dev4.herokuapp.com"
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+const USERS_API = `${BASE_URL}/api/users`;
+const TUITS_API = `${BASE_URL}/api/tuits`;
+
 const api = axios.create({
   withCredentials: true
 });
@@ -37,6 +41,3 @@ export const userDislikesTuit = (uid, tid) =>
 export const tuitDislikedByMe = (uid, tid) =>
     api.get(`${USERS_API}/${uid}/dislikes/${tid}`)
         .then(response => response.data);
-
-
-//bug fix
