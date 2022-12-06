@@ -16,7 +16,7 @@ describe('createTuit', () => {
   };
   // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am meet'
+    tuit : 'Hi i am Nikhil'
   };
 
   // setup test before running test
@@ -59,7 +59,7 @@ describe('deleteTuit', () => {
 
     // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am meet'
+    tuit : 'Hi i am Nikhil'
   };
   let dummyUser = "";
   let newTuit = "";
@@ -99,7 +99,7 @@ describe('retrieveTuitByTuitId', () => {
 
   // sample tuit to insert
   const tuit1 = {
-    tuit : 'Hi i am meet'
+    tuit : 'Hi i am Nikhil'
   };
   let dummyUser = "";
   let newTuit = "";
